@@ -63,13 +63,13 @@ if( !class_exists('orbit_slider') ){
 									'bullets' => 'true', // true or false to activate the bullet navigation
 									'bulletThumbs' => 'false', // thumbnails for the bullets
 									'centerBullets' => 'true', // center bullet nav with js, turn this off if you want to position the bullet nav manually
-									'advanceSpeed' => "4000", // if timer is enabled, time between transitions				
+									'advanceSpeed' => '4000', // if timer is enabled, time between transitions				
 									'directionalNav' => 'true',	// manual advancing directional navs
 									'captions' => 'true', // do you want captions?
 									'captionAnimation' => 'fade', // fade, slideOpen, none	
 									'captionAnimationSpeed' => '800', // if so how quickly should they animate in	
 									'timer' => 'false', // true or false to have the timer	
-									'sliderTheme' => 'default', // default, galaxy, custom
+									'sliderTheme' => 'default', // default, custom, more to come...
 									'readyLoad' => 'ready', // use doc ready or window load
 									'loadJs' => 'header' // header, footer			
 								     );
@@ -369,6 +369,8 @@ if( !class_exists('orbit_slider') ){
 						  $excerpt = get_the_excerpt();
 						  // Fetch image for slider
 						  $img = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'orbit-slide' ); $urlimg = $img['0'];
+						  // Fetch image ID (then applied to content divs for styling individual content areas)
+						  $imgid = get_post_thumbnail_id();
 						  // Fetch thumbnail for slider
 						  $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'orbit-slide-small' ); $urlthumb = $thumb['0'];							
 						  // Slide Caption
@@ -392,7 +394,7 @@ if( !class_exists('orbit_slider') ){
 						  // If not and has html content
 						  } elseif( !empty($post->post_content) ) {
 						  echo '<div class="content" style=""' . $datathumb . '>';
-						  echo '<div class="slide-content">' . get_the_content() . '</div>';
+						  echo '<div class="slide-content slide-content-' . $imgid . '">' . get_the_content() . '</div>';
 						  echo '<img class="orbit-slide" src="' . $urlimg . '" />';
 						  echo '</div>';
 						  // Otherwise, lets just use images
@@ -559,7 +561,7 @@ if( !class_exists('orbit_slider') ){
 						return $option_value;
 					break;					
 				case 'sliderTheme':
-					if( in_array($option_value, array('default', 'galaxy', 'custom')) )
+					if( in_array($option_value, array('default', 'custom')) )
 						return $option_value;
 					break;	
 				case 'post_type':
