@@ -1,5 +1,6 @@
 === WP Orbit Slider ===
 
+
 Contributors: Jonny Janiero ( Virtual Pudding )
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZY92BLQVS5BSS
 Tags: orbit, orbit slider, slideshow, slider, javascript slider, jquery slider, carousel, featured content, gallery, banners, image rotation, images, rotate, auto, autoplay, shortcode, slide, media, pictures, custom post types, thumbnails, responsive
