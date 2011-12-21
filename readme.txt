@@ -8,7 +8,7 @@ Requires at least: 3.0
 Tested up to: 3.2
 Stable Tag: 1.0
 
-WP Orbit Slider is a jQuery slider that uses a custom post type for each slide and taxonomies to group slides for various post/pages. Oh, its also responsive!
+WP Orbit Slider is a jQuery slider based around Orbit Slider by the very amazing Zurb team! It uses a custom post type for each slide and taxonomies to group slides for various post/pages. Oh, its also responsive!
 *** Please be aware, you can only run one instance of the slide on any given post/page. This is a limitation of the original jQuery slider by Zurb. Until such changes, this WordPress plugin will operate in the same way ***
 http://www.zurb.com/playground/orbit-jquery-image-slider
 
