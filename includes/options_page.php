@@ -182,6 +182,17 @@
 					<div id="advanced-settings" class="postbox">						
 						<h3 class="hndle"><span><?php _e('Advanced Settings', 'wp-orbit-slider'); ?></span></h3>						
 						<div class="inside">		
+
+
+                        	<!-- setImgSize -->
+							<p>
+								<strong><?php _e('As default, the slides are 540x450 but are responsive. If your slide needs to be larger or a different ratio, add_image_size in your functions.php - name the size: orbit-custom and select it from below. In all cases, the slider will fill stretch to the div that surrounds it.', 'wp-orbit-slider'); ?></strong><br />
+								<input type="radio" name="orbit_slider_options[imgSize]" value="orbit-slide" <?php if( $options['imgSize'] == 'orbit-slide' ) echo 'checked="checked"'; ?> />
+								<label><?php _e('540, 450 hard crop', 'wp-orbit-slider'); ?></label><br />
+								
+								<input type="radio" name="orbit_slider_options[imgSize]" value="orbit-custom" <?php if( $options['imgSize'] == 'orbit-custom' ) echo 'checked="checked"'; ?> />
+								<label><?php _e('Custom Size', 'wp-orbit-slider'); ?></label>
+							</p>
 						
                         	<!-- loadJs -->
 							<p>
@@ -209,9 +220,6 @@
                             	<strong><?php _e('CSS Slider Theme Settings', 'wp-orbit-slider'); ?></strong><br />
 								<input type="radio" name="orbit_slider_options[sliderTheme]" value="default" <?php if( $options['sliderTheme'] == 'default' ) echo 'checked="checked"'; ?> />
 								<label><?php _e('Default', 'wp-orbit-slider'); ?></label><br />
-								
-								<input type="radio" name="orbit_slider_options[sliderTheme]" value="galaxy" <?php if( $options['sliderTheme'] == 'galaxy' ) echo 'checked="checked"'; ?> />
-								<label><?php _e('Galaxy', 'wp-orbit-slider'); ?></label><br />
 								
 								<input type="radio" name="orbit_slider_options[sliderTheme]" value="custom" <?php if( $options['sliderTheme'] == 'custom' ) echo 'checked="checked"'; ?> />
 								<label><?php _e('Custom', 'wp-orbit-slider'); ?></label>
@@ -250,27 +258,14 @@
                       </form>
 					</div> 
 				</div>
-				
-				<div id="like" class="postbox">
-					<h3><?php _e('Like this plugin?', 'wp-orbit-slider'); ?></span></h3>
+<?php /*				
+				<div id="extra" class="postbox">
+					<h3></span></h3>
 					<div class="inside">
-						<p><?php _e('Why not do any or all of the following:', 'wp-orbit-slider'); ?>
-							<ul>
-								<li><?php printf(__('%sLink to it%s so others can find out about it', 'wp-orbit-slider'), '<a href="http://www.orderofbusiness.net/plugins/wp-orbit-slider/" target="_blank">', '</a>'); ?></li>
-								<li><?php printf(__('%sGive it a 5 star rating%s at WordPress.org', 'wp-orbit-slider'), '<a href="http://wordpress.org/extend/plugins/wp-orbit-slider/" target="_blank">', '</a>'); ?></li>
-								<li><?php printf(__('%sDonate%s a token of your appreciation', 'wp-orbit-slider'), '<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZWYWE2TQLXBJY" target="_blank">', '</a>'); ?></li>
-							</ul>
-						</p>
+
 					</div> 
 				</div>
-				
-				<div id="recommendations" class="postbox">
-					<h3><?php _e('Highly Recommended Plugins', 'wp-orbit-slider'); ?></h3>
-					<div class="inside">
-						<a href="https://www.e-junkie.com/ecom/gb.php?cl=54585&amp;c=ib&amp;aff=155486" target="_blank" alt="Gravity Forms" class="alignleft"><img src="<?php echo WP_PLUGIN_URL.'/wp-orbit-slider/css/images/gravity_forms.gif'; ?>" alt="Gravity Forms"></a>
-						<div style="clear:both;"></div>
-					</div> 
-				</div>
+*/ ?>
 					
 			</div>  
 		</div>	

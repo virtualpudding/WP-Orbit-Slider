@@ -71,9 +71,9 @@ if( !class_exists('orbit_slider') ){
 									'timer' => 'false', // true or false to have the timer	
 									'sliderTheme' => 'default', // default, custom, more to come...
 									'readyLoad' => 'ready', // use doc ready or window load
+									'imgSize' => 'orbit-slide',
 									'loadJs' => 'header' // header, footer			
-								     );
-		  
+								     );		  
 			// Register Post Type
 			new wordpress_custom_post_type($this->post_type, 
 										   array('singular' => __('Slide', 'wp-orbit-slider'), 
@@ -151,7 +151,6 @@ if( !class_exists('orbit_slider') ){
 		function after_setup_theme(){ 
 			// Adds support for featured images and register some default image sizes
 			add_theme_support( 'post-thumbnails' ); 
-			add_image_size( 'orbit-slide-default', 540, 9999 ); 
 			add_image_size( 'orbit-slide', 540, 450, true ); 
 			add_image_size( 'orbit-slide-small', 100, 83, true ); 
 		}
@@ -362,13 +361,14 @@ if( !class_exists('orbit_slider') ){
 					  <div id="orbit-inside">
 	 
 						  <?php foreach($slider_posts as $post): setup_postdata($post);
-						  
+						  $options = $this->get_options();
 						  // Get the title
 						  $title = get_the_title(); 
 						  // Get the excerpt
 						  $excerpt = get_the_excerpt();
 						  // Fetch image for slider
-						  $img = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'orbit-slide' ); $urlimg = $img['0'];
+						  $imgsize = $options->imgSize;
+						  $img = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), ''.$imgsize.'' ); $urlimg = $img['0'];
 						  // Fetch image ID (then applied to content divs for styling individual content areas)
 						  $imgid = get_post_thumbnail_id();
 						  // Fetch thumbnail for slider
@@ -556,6 +556,10 @@ if( !class_exists('orbit_slider') ){
 					if( in_array($option_value, array('head', 'footer')) )
 						return $option_value;
 					break;
+				case 'imgSize':
+					if( in_array($option_value, array('orbit-slide', 'orbit-custom')) )
+						return $option_value;
+					break;					
 				case 'readyLoad':
 					if( in_array($option_value, array('ready', 'load')) )
 						return $option_value;
