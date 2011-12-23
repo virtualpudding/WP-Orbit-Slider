@@ -15,14 +15,12 @@ WP Orbit Slider is based around the jQuery Orbit Slider from the excellent team 
 It uses a custom post type for each slide and taxonomies to create slider groups. The restriction is one slider per post/page. Dont fill your pages with sliders. Use one. Make it bold and get your message across!
 
 
-
 == Installation ==
 
 1. Upload the `wp-orbit-slider` folder to the `/wp-content/plugins/` directory.
 1. Activate the plugin through the 'Plugins' menu in WordPress
 1. Create your slides by clicking on 'Slides' in your administration menu and selecting 'Add New Slide'. **As default the slider ONLY uses the featured image attached to any given slide.**
 1. Use the shortcode `[orbit-slider]` in the content area of a page or post where you want the image slider to appear.
-1. Alternatively, insert the following line into your theme where you want the slider to appear: <?php echo do_shortcode('[orbit-slider]') ?>`
 
 
 == Frequently Asked Questions ==
@@ -34,7 +32,7 @@ You can insert the Orbit Slider by pasting the shortcode `[orbit-slider]` into t
 = What are the optional attributes that can be used with the shortcode? = 
 The attributes supported by the `[orbit-slider]` shortcode are:
 1. **category** - You can choose to display only posts from a particular category. Please note that if a category doesn't exist, all posts will show in the slider as default.  Example: `[orbit-slider category="my-category"]`
-1. **numberposts** - The numberposts attribute allows you to set the number of posts to display in the slider.  The default is -1 and will show all available posts. Example: `[orbit-slider numberposts="3"]`
+2. **numberposts** - The numberposts attribute allows you to set the number of posts to display in the slider.  The default is -1 and will show all available posts. Example: `[orbit-slider numberposts="3"]`
 
 You can combine both of these attributes together as needed.  Example: `[orbit-slider category="my_category" numberposts="3"]`
 
