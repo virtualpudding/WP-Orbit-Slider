@@ -11,14 +11,11 @@ WP Orbit Slider is a jQuery slider that uses custom post type and taxonomies. Oh
 
 == Description ==
 
-This is the long description.  No limit, and you can use Markdown (as well as in the following sections).
+WP Orbit Slider is based around the jQuery Orbit Slider from the excellent team <a target="_blank" href="http://www.zurb.com/playground/orbit-jquery-image-slider">Zurb</a>.
+It uses a custom post type for each slide and taxonomies to create slider groups. The restriction is one slider per post/page. Dont fill your pages with sliders. Use one. Make it bold and get your message across!
 
 
 == Installation ==
-
-This section describes how to install the plugin and get it working.
-
-e.g.
 
 1. Upload the `wp-orbit-slider` folder to the `/wp-content/plugins/` directory.
 1. Activate the plugin through the 'Plugins' menu in WordPress
@@ -78,6 +75,9 @@ If you want to use any of the shortcode attributes when hardcoding your theme, y
 
 `<?php echo do_shortcode('[orbit-slider category="my_category"]'); ?>`
 
+= Is there anything on the todo list for the plugin ? =
+Indeed.
+Better conditional script loading will be in the next release.
 
 == Screenshots ==
 
