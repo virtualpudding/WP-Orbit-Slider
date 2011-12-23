@@ -15,6 +15,7 @@ WP Orbit Slider is based around the jQuery Orbit Slider from the excellent team 
 It uses a custom post type for each slide and taxonomies to create slider groups. The restriction is one slider per post/page. Dont fill your pages with sliders. Use one. Make it bold and get your message across!
 
 
+
 == Installation ==
 
 1. Upload the `wp-orbit-slider` folder to the `/wp-content/plugins/` directory.
