@@ -127,7 +127,7 @@ function wpt_portfolio_icons() { ?>
         #menu-posts-vp_orbitslides .wp-menu-image {
             background: url(<?php echo plugins_url( 'css/images/icon16.png' , dirname(__FILE__) ); ?>) no-repeat 7px 6px !important;
         }
-    #menu-posts-vp_orbitslides:hover .wp-menu-image, #menu-posts-vp_orbitslides.wp-has-current-submenu .wp-menu-image:hover {
+    #menu-posts-vp_orbitslides:hover .wp-menu-image, #menu-posts-vp_orbitslides.wp-has-current-submenu .wp-menu-image {
             background-position:7px -23px !important;
         }
 		
